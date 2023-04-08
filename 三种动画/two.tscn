@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://bffnxankit42k"]
+
+[ext_resource type="Texture2D" uid="uid://dpospdo20lw2o" path="res://art/frog.png" id="1_gqful"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojvhg"]
+atlas = ExtResource("1_gqful")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mnc3"]
+atlas = ExtResource("1_gqful")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1b1nq"]
+atlas = ExtResource("1_gqful")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ifb7"]
+atlas = ExtResource("1_gqful")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1cwd"]
+atlas = ExtResource("1_gqful")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ty0eh"]
+atlas = ExtResource("1_gqful")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwp6p"]
+atlas = ExtResource("1_gqful")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ydx4"]
+atlas = ExtResource("1_gqful")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0fcco"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ojvhg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mnc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1b1nq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ifb7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1cwd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ty0eh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwp6p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ydx4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="two" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0fcco")
+frame = 3
+frame_progress = 0.648169
