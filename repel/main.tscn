@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c03qio7ssk8am"]
+
+[ext_resource type="PackedScene" uid="uid://cf1wnuf3ulcwk" path="res://fire.tscn" id="1_dp6q7"]
+[ext_resource type="PackedScene" uid="uid://cvud4ccpmch1w" path="res://moth.tscn" id="2_6on7s"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Fire" parent="." instance=ExtResource("1_dp6q7")]
+
+[node name="Moth" parent="." instance=ExtResource("2_6on7s")]
+position = Vector2(296, -2)

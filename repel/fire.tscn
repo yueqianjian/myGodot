@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cf1wnuf3ulcwk"]
+
+[ext_resource type="Texture2D" uid="uid://c640y63njymw7" path="res://icon.svg" id="1_wqj4r"]
+[ext_resource type="Script" path="res://hit_box.gd" id="2_fhhsm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gdidc"]
+radius = 55.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pwfih"]
+size = Vector2(120, 120)
+
+[node name="Fire" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.839216, 0.745098, 0, 1)
+texture = ExtResource("1_wqj4r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gdidc")
+
+[node name="HitBox" type="Area2D" parent="."]
+collision_mask = 0
+script = ExtResource("2_fhhsm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("RectangleShape2D_pwfih")
