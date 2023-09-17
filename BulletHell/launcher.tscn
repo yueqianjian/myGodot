@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://coqmq0pb038uu"]
+
+[ext_resource type="Script" path="res://launcher.gd" id="1_vhtp3"]
+[ext_resource type="Texture2D" uid="uid://qtyo0l4r7tdv" path="res://icon.svg" id="2_vt1st"]
+
+[node name="Launcher" type="Node2D"]
+script = ExtResource("1_vhtp3")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_vt1st")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
